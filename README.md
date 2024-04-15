@@ -1152,11 +1152,8 @@ menos una compañera.
 
 ## 6. Stack de tecnologías
 
-Puedes implementar este proyecto en JavaScript, Python o Java.
+Utiliza las siguientes recomendaciones para implementar tu proyecto: 
 
-* [NodeJs](./docs/stack-node.md)
-* [Java](./docs/stack-java.md)
-* [Python](./docs/stack-python.md)
 * [C#](./docs/stack-csharp.md)
 
 ## 7. Pistas, tips y lecturas complementarias
