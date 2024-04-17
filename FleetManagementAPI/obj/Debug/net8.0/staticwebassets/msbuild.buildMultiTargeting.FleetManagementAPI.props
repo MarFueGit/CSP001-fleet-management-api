@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FleetManagementAPI.props" />
+</Project>

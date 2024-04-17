@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+rrnUlTySMpuVRWvzuBw3JJyhgo+soHlBxbopmvb+SE=",
+  "Source": "FleetManagementAPI",
+  "BasePath": "_content/FleetManagementAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
