@@ -9,10 +9,4 @@ namespace FleetManagementAPI.Models
         public string Nombre { get; set; }
         public string CorreoElectronico { get; set; }
     }
-
-    // Creación de la tabla en la base de datos
-    public class ApplicationDbContext : DbContext
-    {
-        public DbSet<Usuario> Usuarios { get; set; }
-    }
 }
