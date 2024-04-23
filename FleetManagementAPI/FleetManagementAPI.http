@@ -4,3 +4,6 @@ GET {{FleetManagementAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{FleetManagementAPI_HostAddress}}/taxis
+Accept: application/json

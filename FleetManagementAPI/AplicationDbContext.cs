@@ -1,26 +1,27 @@
-﻿using FleetManagementAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using Npgsql;
+﻿using Microsoft.EntityFrameworkCore;
+using FleetManagementAPI.Models;
+
 namespace FleetManagementAPI
 {
     public class ApplicationDbContext : DbContext
     {
-
-        public DbSet<Usuario> Usuarios { get; set; } //Migracion Usuario
-        public DbSet<Taxi> Taxis { get; set; } //Migracion Taxi
-        public DbSet<Trajectorie> Trajectories { get; set; } //Migracion Trajectorie
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                var connectionString = "Host=ep-little-pond-a4bjr7b8-pooler.us-east-1.aws.neon.tech;Database=verceldb;Username=default;Password=ymQCBw9DrY1i";
-                var connection = new NpgsqlConnection(connectionString);
-                optionsBuilder.UseNpgsql(connection);
-            }
         }
 
+        public DbSet<Usuario> Usuarios { get; set; } // Migracion Usuario
+        public DbSet<Taxi> Taxis { get; set; } // Migracion Taxi
+        public DbSet<Trajectorie> Trajectories { get; set; } // Migracion Trajectorie
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configure primary key for Taxi entity
+            modelBuilder.Entity<Taxi>()
+                .HasKey(t => t.idtaxi);
+
+            // Configure primary key for Trajectorie entity
+            modelBuilder.Entity<Trajectorie>()
+                .HasKey(t => t.idtrajectorie); // Assuming Id is the property representing the primary key
+        }
     }
 }
