@@ -6,7 +6,9 @@ namespace FleetManagementAPI
     public class ApplicationDbContext : DbContext
     {
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; } //Migracion Usuario
+        public DbSet<Taxi> Taxis { get; set; } //Migracion Taxi
+        public DbSet<Trajectorie> Trajectories { get; set; } //Migracion Trajectorie
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
