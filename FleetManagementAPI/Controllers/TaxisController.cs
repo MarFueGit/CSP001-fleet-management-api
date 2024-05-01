@@ -29,7 +29,7 @@ namespace FleetManagementAPI.Controllers
             var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
             var taxis = await _context.Taxis
-                .OrderBy(t => t.idtaxi) // Change this to your sorting criteria
+                .OrderBy(t => t.idtaxi)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
@@ -44,7 +44,7 @@ namespace FleetManagementAPI.Controllers
                 data = taxis
             };
 
-            // Serialize paginationMetadata using System.Text.Json
+           
             var jsonMetadata = JsonSerializer.Serialize(paginationMetadata);
 
             Response.Headers.Add("X-Pagination", jsonMetadata);

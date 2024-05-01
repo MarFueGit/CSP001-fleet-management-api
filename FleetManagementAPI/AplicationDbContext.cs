@@ -15,13 +15,13 @@ namespace FleetManagementAPI
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure primary key for Taxi entity
+            // Configura la clave principal para la entidad Taxi
             modelBuilder.Entity<Taxi>()
                 .HasKey(t => t.idtaxi);
 
-            // Configure primary key for Trajectorie entity
+            // Configura la clave principal para la entidad Trajectoria
             modelBuilder.Entity<Trajectorie>()
-                .HasKey(t => t.idtrajectorie); // Assuming Id is the property representing the primary key
+                .HasKey(t => t.idtrajectorie); // Suponiendo que Id es la propiedad que representa la clave principal
         }
     }
 }

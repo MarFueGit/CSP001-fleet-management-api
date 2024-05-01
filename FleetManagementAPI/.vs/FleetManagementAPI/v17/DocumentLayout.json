@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\taxiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\taxiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\trajectorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\trajectorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaxisController.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TaxisController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TaxisController.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TaxisController.cs",
-              "RelativeToolTip": "Controllers\\TaxisController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwBkAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T01:48:48.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Trajectorie.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
-              "RelativeDocumentMoniker": "Models\\Trajectorie.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
-              "RelativeToolTip": "Models\\Trajectorie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T01:47:15.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TrajectoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TrajectoriesController.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
-              "RelativeToolTip": "Controllers\\TrajectoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T01:46:48.062Z",
-              "EditorCaption": ""
             }
           ]
         }

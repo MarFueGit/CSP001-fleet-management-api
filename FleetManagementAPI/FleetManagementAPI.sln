@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FleetManagementAPI", "FleetManagementAPI.csproj", "{1216AF65-DC10-4555-8995-90FDC6C899FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFleetManagementAPI", "..\TestFleetManagementAPI\TestFleetManagementAPI.csproj", "{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FleetManagementAPI.Tests", "..\TestFleetManagementAPI\FleetManagementAPI.Tests.csproj", "{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
