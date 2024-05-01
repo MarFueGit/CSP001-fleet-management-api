@@ -68,9 +68,43 @@ namespace FleetManagementAPI.Controllers
             return paginationMetadata;
         }
 
+        [HttpGet("/last-locations")]
+        public async Task<ActionResult<IEnumerable<object>>> GetLastLocations(int page = 1, int pageSize = 10)
+        {
+            var query = _context.Trajectories
+                .GroupBy(t => t.taxi_id)
+                .Select(g => g.OrderByDescending(t => t.date).FirstOrDefault());
 
+            var totalCount = await query.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
+            var lastLocations = await query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
 
+            var lastLocationsWithPlate = lastLocations.Select(t => new
+            {
+                id_trajectorie = t.idtrajectorie,
+                taxi_id = t.taxi_id,
+                latitude = t.latitude,
+                longitude = t.longitude,
+                plate = _context.Taxis.FirstOrDefault(tx => tx.idtaxi == t.taxi_id)?.plate,
+                date = t.date
+            });
+
+            var paginationMetadata = new
+            {
+                total = totalCount,
+                totalPages,
+                currentPage = page,
+                nextPage = page < totalPages ? page + 1 : (int?)null,
+                lastPage = totalPages,
+                data = lastLocationsWithPlate
+            };
+
+            return Ok(paginationMetadata);
+        }
 
 
     }

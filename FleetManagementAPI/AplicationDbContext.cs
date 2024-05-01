@@ -8,8 +8,6 @@ namespace FleetManagementAPI
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-
-        public DbSet<Usuario> Usuarios { get; set; } // Migracion Usuario
         public DbSet<Taxi> Taxis { get; set; } // Migracion Taxi
         public DbSet<Trajectorie> Trajectories { get; set; } // Migracion Trajectorie
 
