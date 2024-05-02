@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/Yce1Pr8Bxt8mlKbFGSSFV7fj7MiGKkwF7ZvY744zPny1mYs5LnwU7DZ9lx+w0ZCgS/KS47Bz6Dxno/ma2jbdA==",
+  "dgSpecHash": "aGIh2H4hrgsrHs8JcnT2KOk+lfxB1UTFTARtY82mZzYxAPjxVZzWhz8bbM/3MTTp19jm5J5p/pxBVCYL8PS58g==",
   "success": true,
   "projectFilePath": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\FleetManagementAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\maric\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\maric\\.nuget\\packages\\coverlet.msbuild\\6.0.2\\coverlet.msbuild.6.0.2.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
