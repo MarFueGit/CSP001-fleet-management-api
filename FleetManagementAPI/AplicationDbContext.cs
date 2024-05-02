@@ -1,15 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using FleetManagementAPI.Models;
+using System.Linq;
 
 namespace FleetManagementAPI
 {
-    public class ApplicationDbContext : DbContext
+    public interface IDbContext
+    {
+        DbSet<Taxi> Taxis { get; set; }
+        DbSet<Trajectorie> Trajectories { get; set; }
+        int SaveChanges();
+    }
+
+    public class ApplicationDbContext : DbContext, IDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<Taxi> Taxis { get; set; } // Migracion Taxi
-        public DbSet<Trajectorie> Trajectories { get; set; } // Migracion Trajectorie
+
+        public DbSet<Taxi> Taxis { get; set; }
+        public DbSet<Trajectorie> Trajectories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

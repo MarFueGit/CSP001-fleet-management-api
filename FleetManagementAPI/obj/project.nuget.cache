@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mXmd7Yq93ZjHsIw1VktNukjRlZ1MY01OG6bHv/RgdYR/09mDhdjaFV5U6C5C+dsoftg7GYF/+5VfsO2qBf6liw==",
+  "dgSpecHash": "/Yce1Pr8Bxt8mlKbFGSSFV7fj7MiGKkwF7ZvY744zPny1mYs5LnwU7DZ9lx+w0ZCgS/KS47Bz6Dxno/ma2jbdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\FleetManagementAPI.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.4\\microsoft.entityframeworkcore.design.8.0.4.nupkg.sha512",
+    "C:\\Users\\maric\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.4\\microsoft.entityframeworkcore.inmemory.8.0.4.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.4\\microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\maric\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",

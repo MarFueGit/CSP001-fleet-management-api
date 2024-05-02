@@ -3,15 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}|..\\TestFleetManagementAPI\\FleetManagementAPI.Tests.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\testfleetmanagementapi\\taximodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}|..\\FleetManagementAPI.Tests\\FleetManagementAPI.Tests.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi.tests\\applicationdbcontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,40 +26,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TaxiModelTest.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\TestFleetManagementAPI\\TaxiModelTest.cs",
-              "RelativeDocumentMoniker": "..\\TestFleetManagementAPI\\TaxiModelTest.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\TestFleetManagementAPI\\TaxiModelTest.cs",
-              "RelativeToolTip": "..\\TestFleetManagementAPI\\TaxiModelTest.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwDAAAAAAAAAA",
+              "Title": "ApplicationDbContextTests.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI.Tests\\ApplicationDbContextTests.cs",
+              "RelativeDocumentMoniker": "..\\FleetManagementAPI.Tests\\ApplicationDbContextTests.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI.Tests\\ApplicationDbContextTests.cs",
+              "RelativeToolTip": "..\\FleetManagementAPI.Tests\\ApplicationDbContextTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T20:42:44.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\AplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\AplicationDbContext.cs",
-              "RelativeToolTip": "AplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T20:40:26.077Z",
+              "WhenOpened": "2024-05-02T02:53:10.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TrajectoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TrajectoriesController.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
-              "RelativeToolTip": "Controllers\\TrajectoriesController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwA0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T20:38:19.869Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-02T02:52:32.185Z",
               "EditorCaption": ""
             }
           ]

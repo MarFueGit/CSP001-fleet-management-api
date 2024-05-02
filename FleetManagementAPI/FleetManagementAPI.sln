@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FleetManagementAPI", "FleetManagementAPI.csproj", "{1216AF65-DC10-4555-8995-90FDC6C899FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FleetManagementAPI.Tests", "..\TestFleetManagementAPI\FleetManagementAPI.Tests.csproj", "{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetManagementAPI.Tests", "..\FleetManagementAPI.Tests\FleetManagementAPI.Tests.csproj", "{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1216AF65-DC10-4555-8995-90FDC6C899FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1216AF65-DC10-4555-8995-90FDC6C899FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1216AF65-DC10-4555-8995-90FDC6C899FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42CB4045-DC49-49D4-B5F6-28DC38C35CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
