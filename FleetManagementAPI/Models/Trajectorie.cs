@@ -1,4 +1,5 @@
-﻿namespace FleetManagementAPI.Models
+﻿using System; 
+namespace FleetManagementAPI.Models
 {
     public class Trajectorie
     {
