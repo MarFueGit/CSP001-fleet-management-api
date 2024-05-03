@@ -3,24 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\taxi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\taxi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\trajectoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\taxiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\taxiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\paginationmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\paginationmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6DE9DF-5539-4C5C-A2E5-CE60402F8A52}|..\\FleetManagementAPI.Tests\\FleetManagementAPI.Tests.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi.tests\\taxicontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\trajectorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\trajectorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\taxi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\taxi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +37,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Trajectorie.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
-              "RelativeDocumentMoniker": "Models\\Trajectorie.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
-              "RelativeToolTip": "Models\\Trajectorie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T03:40:32.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T03:34:26.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Taxi.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Taxi.cs",
-              "RelativeDocumentMoniker": "Models\\Taxi.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Taxi.cs",
-              "RelativeToolTip": "Models\\Taxi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T03:34:10.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\AplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\AplicationDbContext.cs",
-              "RelativeToolTip": "AplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:44:51.159Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "PaginationMetadata.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\PaginationMetadata.cs",
+              "RelativeDocumentMoniker": "Models\\PaginationMetadata.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\PaginationMetadata.cs",
+              "RelativeToolTip": "Models\\PaginationMetadata.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:43:54.515Z",
+              "WhenOpened": "2024-05-03T02:15:49.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaxisController.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TaxisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaxisController.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TaxisController.cs",
+              "RelativeToolTip": "Controllers\\TaxisController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAUwCAAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T02:09:41.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaxiControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI.Tests\\TaxiControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\FleetManagementAPI.Tests\\TaxiControllerTest.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI.Tests\\TaxiControllerTest.cs",
+              "RelativeToolTip": "..\\FleetManagementAPI.Tests\\TaxiControllerTest.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T02:08:12.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrajectoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TrajectoriesController.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TrajectoriesController.cs",
+              "RelativeToolTip": "Controllers\\TrajectoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T02:03:53.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-03T02:00:58.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Trajectorie.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
+              "RelativeDocumentMoniker": "Models\\Trajectorie.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Trajectorie.cs",
+              "RelativeToolTip": "Models\\Trajectorie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T02:00:52.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Taxi.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Taxi.cs",
+              "RelativeDocumentMoniker": "Models\\Taxi.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Taxi.cs",
+              "RelativeToolTip": "Models\\Taxi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T01:59:24.91Z",
               "EditorCaption": ""
             }
           ]

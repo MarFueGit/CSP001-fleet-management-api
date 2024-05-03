@@ -1,26 +1,34 @@
-﻿using FleetManagementAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using Npgsql;
+﻿using Microsoft.EntityFrameworkCore;
+using FleetManagementAPI.Models;
+using System.Linq;
+
 namespace FleetManagementAPI
 {
-    public class ApplicationDbContext : DbContext
+    public interface IDbContext
     {
+        DbSet<Taxi> Taxis { get; set; }
+        DbSet<Trajectorie> Trajectories { get; set; }
+        int SaveChanges();
+    }
 
-        public DbSet<Usuario> Usuarios { get; set; } //Migracion Usuario
-        public DbSet<Taxi> Taxis { get; set; } //Migracion Taxi
-        public DbSet<Trajectorie> Trajectories { get; set; } //Migracion Trajectorie
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public class ApplicationDbContext : DbContext, IDbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                var connectionString = "Host=ep-little-pond-a4bjr7b8-pooler.us-east-1.aws.neon.tech;Database=verceldb;Username=default;Password=ymQCBw9DrY1i";
-                var connection = new NpgsqlConnection(connectionString);
-                optionsBuilder.UseNpgsql(connection);
-            }
         }
 
+        public DbSet<Taxi> Taxis { get; set; }
+        public DbSet<Trajectorie> Trajectories { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configura la clave principal para la entidad Taxi
+            modelBuilder.Entity<Taxi>()
+                .HasKey(t => t.idtaxi);
+
+            // Configura la clave principal para la entidad Trajectoria
+            modelBuilder.Entity<Trajectorie>()
+                .HasKey(t => t.idtrajectorie); // Suponiendo que Id es la propiedad que representa la clave principal
+        }
     }
 }

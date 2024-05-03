@@ -6,5 +6,9 @@ namespace FleetManagementAPI.Models
     {
         public int idtaxi { get; set; }
         public string plate { get; set; }
+        public Taxi()
+        {
+            plate = ""; // inicializa la propiedad en el constructor
+        }
     }
 }
