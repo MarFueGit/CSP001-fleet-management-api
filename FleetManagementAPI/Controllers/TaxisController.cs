@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,21 +12,13 @@ namespace FleetManagementAPI.Controllers
     [ApiController]
     public class TaxisController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IDbContext _context;
 
-        public TaxisController(ApplicationDbContext context)
+        public TaxisController(IDbContext context)
         {
             _context = context;
         }
 
-        /// <summary>
-        /// Get a list of taxis with pagination.
-        /// </summary>
-        /// <param name="page">Page number.</param>
-        /// <param name="pageSize">Number of items per page.</param>
-        /// <returns>A paginated list of taxis.</returns>
-        /// <response code="200">Returns the paginated list of taxis.</response>
-        /// <response code="500">If there is an internal server error.</response>
         [HttpGet(Name = "taxis")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -62,5 +53,6 @@ namespace FleetManagementAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
     }
 }

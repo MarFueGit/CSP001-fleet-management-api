@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using FleetManagementAPI.Models;
-using System.Linq;
 
-namespace FleetManagementAPI
+namespace FleetManagementAPI.Models
 {
     public interface IDbContext
     {
@@ -17,7 +15,12 @@ namespace FleetManagementAPI
         {
         }
 
-        public DbSet<Taxi> Taxis { get; set; }
+        // Constructor sin parametros para pruebas.
+        public ApplicationDbContext() : base(new DbContextOptions<ApplicationDbContext>())
+        {
+        }
+
+        public virtual DbSet<Taxi> Taxis { get; set; }
         public DbSet<Trajectorie> Trajectories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,9 +29,10 @@ namespace FleetManagementAPI
             modelBuilder.Entity<Taxi>()
                 .HasKey(t => t.idtaxi);
 
-            // Configura la clave principal para la entidad Trajectoria
+            // Configurar clave primaria para entidad Trajectoria
             modelBuilder.Entity<Trajectorie>()
-                .HasKey(t => t.idtrajectorie); // Suponiendo que Id es la propiedad que representa la clave principal
+                .HasKey(t => t.idtrajectorie);
         }
     }
 }
+

@@ -38,8 +38,8 @@ namespace FleetManagementAPI.Controllers
         {
             try
             {
-                // Extract the date part from the DateTime object
-                var searchDate = date.Date;
+                // Convert the date to UTC format
+                var searchDate = date.ToUniversalTime().Date;
 
                 // Query the database for trajectories matching the given idtaxi and date
                 var query = _context.Trajectories
@@ -80,6 +80,7 @@ namespace FleetManagementAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
 
         /// <summary>
         /// Get the last recorded locations of all taxis.

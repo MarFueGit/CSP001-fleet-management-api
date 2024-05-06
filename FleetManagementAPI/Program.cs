@@ -1,5 +1,10 @@
 using FleetManagementAPI;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using FleetManagementAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +14,9 @@ builder.Services.AddControllers();
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register IDbContext
+builder.Services.AddScoped<IDbContext, ApplicationDbContext>();
 
 // Add Swagger services
 builder.Services.AddSwaggerGen();
