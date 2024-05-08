@@ -6,6 +6,8 @@ namespace FleetManagementAPI.Models
     {
         DbSet<Taxi> Taxis { get; set; }
         DbSet<Trajectorie> Trajectories { get; set; }
+
+        DbSet<Usuario> Usuarios { get; set; }
         int SaveChanges();
     }
 
@@ -22,6 +24,7 @@ namespace FleetManagementAPI.Models
 
         public virtual DbSet<Taxi> Taxis { get; set; }
         public DbSet<Trajectorie> Trajectories { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
