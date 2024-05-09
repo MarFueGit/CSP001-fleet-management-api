@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace FleetManagementAPI.Models
 {
@@ -7,8 +8,8 @@ namespace FleetManagementAPI.Models
         DbSet<Taxi> Taxis { get; set; }
         DbSet<Trajectorie> Trajectories { get; set; }
 
-        DbSet<Usuario> Usuarios { get; set; }
-        int SaveChanges();
+        DbSet<User> Users { get; set; }
+        Task<int> SaveChangesAsync();
     }
 
     public class ApplicationDbContext : DbContext, IDbContext
@@ -24,7 +25,7 @@ namespace FleetManagementAPI.Models
 
         public virtual DbSet<Taxi> Taxis { get; set; }
         public DbSet<Trajectorie> Trajectories { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,6 +37,10 @@ namespace FleetManagementAPI.Models
             modelBuilder.Entity<Trajectorie>()
                 .HasKey(t => t.idtrajectorie);
         }
+
+        public virtual async Task<int> SaveChangesAsync()
+        {
+            return await base.SaveChangesAsync();
+        }
     }
 }
-

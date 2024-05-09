@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\migrations\\20240509031839_usersmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|solutionrelative:migrations\\20240509031839_usersmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1216AF65-DC10-4555-8995-90FDC6C899FE}|FleetManagementAPI.csproj|c:\\users\\maric\\desktop\\laboratoria-c#\\csp001-fleet-management-api\\fleetmanagementapi\\controllers\\taxiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "20240509031839_UsersMigration.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Migrations\\20240509031839_UsersMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240509031839_UsersMigration.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Migrations\\20240509031839_UsersMigration.cs",
+              "RelativeToolTip": "Migrations\\20240509031839_UsersMigration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T03:19:12.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TaxisController.cs",
               "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\TaxisController.cs",
               "RelativeDocumentMoniker": "Controllers\\TaxisController.cs",
@@ -42,8 +59,7 @@
               "RelativeToolTip": "Controllers\\TaxisController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T02:05:10.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-08T02:05:10.438Z"
             },
             {
               "$type": "Document",
@@ -53,7 +69,7 @@
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCMAAABKAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAAwFMAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T02:03:42.413Z",
               "EditorCaption": ""
@@ -66,7 +82,7 @@
               "RelativeDocumentMoniker": "AplicationDbContext.cs",
               "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\AplicationDbContext.cs",
               "RelativeToolTip": "AplicationDbContext.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBoAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T01:54:32.362Z",
               "EditorCaption": ""
@@ -74,12 +90,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\maric\\Desktop\\laboratoria-c#\\CSP001-fleet-management-api\\FleetManagementAPI\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T01:54:11.466Z",
               "EditorCaption": ""
