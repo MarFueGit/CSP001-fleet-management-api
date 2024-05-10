@@ -33,4 +33,15 @@ namespace FleetManagementAPI.Models
         [Required]
         public string Role { get; set; }
     }
+
+    public class UpdateUserDto
+    {
+        public string name { get; set; }
+
+        public string email { get; set; }
+
+        public string role { get; set; }
+    }
+
+
 }

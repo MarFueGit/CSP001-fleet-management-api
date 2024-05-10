@@ -5,6 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using FleetManagementAPI.Models;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System;
+using System.IO;
+using Microsoft.Extensions.Configuration;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +25,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IDbContext, ApplicationDbContext>();
 
 // Add Swagger services
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.OperationFilter<CustomOperationFilter>(); // Register the custom operation filter
+});
 
 var app = builder.Build();
 

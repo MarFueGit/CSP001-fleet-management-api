@@ -9,6 +9,7 @@ namespace FleetManagementAPI.Models
         DbSet<Trajectorie> Trajectories { get; set; }
 
         DbSet<User> Users { get; set; }
+
         Task<int> SaveChangesAsync();
     }
 
