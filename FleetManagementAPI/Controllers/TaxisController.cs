@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,6 +23,7 @@ namespace FleetManagementAPI.Controllers
         [HttpGet(Name = "taxis")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Get the list of taxis")]
         public async Task<ActionResult<object>> Get([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             try

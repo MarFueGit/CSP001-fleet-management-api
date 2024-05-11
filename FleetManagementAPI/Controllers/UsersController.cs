@@ -6,6 +6,8 @@ using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace FleetManagementAPI.Controllers
 {
@@ -41,7 +43,7 @@ namespace FleetManagementAPI.Controllers
                     .OrderBy(u => u.Id)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize)
-                    .Select(u => new { u.Id, u.Name, u.Email, u.Password, u.Role })
+                    .Select(u => new { u.Id, u.Name, u.Email, u.Role })
                     .ToListAsync();
 
                 var paginationMetadata = new PaginationMetadata
@@ -71,6 +73,7 @@ namespace FleetManagementAPI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Create a new user")]
         public async Task<ActionResult<User>> PostUsuario([FromBody] CreateUserDto createUserDto)
         {
             try
@@ -82,13 +85,17 @@ namespace FleetManagementAPI.Controllers
                     return BadRequest("User with this email already exists.");
                 }
 
+                // Hash the password
+                HashPassword encryptor = new HashPassword();
+                string hashedPassword = encryptor.EncryptPassword(createUserDto.Password);
+
                 // Create a new User object
                 var newUser = new User
                 {
                     Name = createUserDto.Name,
                     Email = createUserDto.Email,
                     Role = createUserDto.Role,
-                    Password = createUserDto.Password
+                    Password = hashedPassword // Store the hashed password
                 };
 
                 // Add the new user to the database
@@ -114,6 +121,7 @@ namespace FleetManagementAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Update the user by id")]
         public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] UpdateUserDto updateUserDto)
         {
             try
@@ -162,6 +170,7 @@ namespace FleetManagementAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Delete a user by id")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             try

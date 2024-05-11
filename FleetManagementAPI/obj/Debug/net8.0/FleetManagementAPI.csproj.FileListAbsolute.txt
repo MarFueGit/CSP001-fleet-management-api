@@ -143,3 +143,4 @@ C:\Users\maric\Desktop\laboratoria-c#\CSP001-fleet-management-api\FleetManagemen
 C:\Users\maric\Desktop\laboratoria-c#\CSP001-fleet-management-api\FleetManagementAPI\obj\Debug\net8.0\FleetManagementAPI.pdb
 C:\Users\maric\Desktop\laboratoria-c#\CSP001-fleet-management-api\FleetManagementAPI\obj\Debug\net8.0\FleetManagementAPI.genruntimeconfig.cache
 C:\Users\maric\Desktop\laboratoria-c#\CSP001-fleet-management-api\FleetManagementAPI\obj\Debug\net8.0\ref\FleetManagementAPI.dll
+C:\Users\maric\Desktop\laboratoria-c#\CSP001-fleet-management-api\FleetManagementAPI\bin\Debug\net8.0\BouncyCastle.Crypto.dll

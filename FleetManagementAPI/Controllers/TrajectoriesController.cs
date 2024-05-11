@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace FleetManagementAPI.Controllers
 {
@@ -34,6 +35,7 @@ namespace FleetManagementAPI.Controllers
         [HttpPost(Name = "SearchTrajectories")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Search and return trajectories by idTaxi and date")]
         public async Task<ActionResult<object>> SearchTrajectories(int idtaxi, DateTime date, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             try
@@ -93,6 +95,7 @@ namespace FleetManagementAPI.Controllers
         [HttpGet("/api/last-locations")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Description("Return the last location of every taxi")]
         public async Task<ActionResult<IEnumerable<object>>> GetLastLocations(int page = 1, int pageSize = 10)
         {
             try
