@@ -1,3 +1,5 @@
+//Importacion de espacio de nombres
+
 using FleetManagementAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +13,8 @@ using System.Text;
 
 namespace FleetManagementAPI.Controllers
 {
-    [Route("api/users")]
-    [ApiController]
+    [Route("api/users")] // Establece la ruta base para todas acciones en este controlador.
+    [ApiController] // Indica que este controlador responde a las solicitudes web API.
     public class UsersController : ControllerBase
     {
         private readonly IDbContext _context;
