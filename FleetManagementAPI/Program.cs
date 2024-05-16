@@ -6,16 +6,20 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using FleetManagementAPI.Models;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
-using System;
-using System.IO;
 using Microsoft.Extensions.Configuration;
-using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using FleetManagementAPI.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+// Load configuration
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                     .AddEnvironmentVariables();
 
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -24,10 +28,32 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Register IDbContext
 builder.Services.AddScoped<IDbContext, ApplicationDbContext>();
 
+// Register IHashPassword
+builder.Services.AddScoped<IHashPassword, HashPassword>();
+
+// Configure JWT authentication
+var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
+
 // Add Swagger services
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fleet Management API", Version = "v1" });
     c.OperationFilter<CustomOperationFilter>(); // Register the custom operation filter
 });
 
@@ -43,12 +69,13 @@ if (app.Environment.IsDevelopment())
     // specifying the Swagger JSON endpoint.
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fleet Management API");
     });
 }
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

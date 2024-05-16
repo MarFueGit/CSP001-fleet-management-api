@@ -18,10 +18,16 @@ namespace FleetManagementAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IDbContext _context;
+        private readonly HashPassword _hashPassword;
 
-        public UsersController(IDbContext context)
+        public UsersController(IDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _hashPassword = new HashPassword(configuration);
+        }
+
+        public UsersController(IDbContext @object)
+        {
         }
 
         /// <summary>
@@ -92,8 +98,7 @@ namespace FleetManagementAPI.Controllers
                 }
 
                 // Hash the password
-                HashPassword encryptor = new HashPassword();
-                string hashedPassword = encryptor.EncryptPassword(createUserDto.Password);
+                string hashedPassword = _hashPassword.EncryptPassword(createUserDto.Password);
 
                 // Creamos un nuevo objeto User
                 var newUser = new User

@@ -43,5 +43,12 @@ namespace FleetManagementAPI.Models
         public string role { get; set; }
     }
 
+    public class LoginDto
+    {
+        public string email { get; set; }
+        public string password { get; set; }
+    }
+
+
 
 }
