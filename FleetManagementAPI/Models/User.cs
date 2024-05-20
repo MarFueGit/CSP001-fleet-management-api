@@ -1,14 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace FleetManagementAPI.Models
 {
-    // Modelo
+    // Modelo usuario
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key] // Define la propiedad como clave primaria
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -18,9 +16,10 @@ namespace FleetManagementAPI.Models
         public string Role { get; set; }
     }
 
+    // DTO para la creacion de usuarios
     public class CreateUserDto
     {
-        [Required]
+        [Required] // Campo obligatorio
         public string Name { get; set; }
 
         [Required]
@@ -34,19 +33,25 @@ namespace FleetManagementAPI.Models
         public string Role { get; set; }
     }
 
+    // DTO para la actualizacion de usuarios
     public class UpdateUserDto
     {
-        public string name { get; set; }
+        public string Name { get; set; } 
 
-        public string email { get; set; }
+        [EmailAddress] // Debe ser una dirección de correo electrónico válida
+        public string Email { get; set; } // Nueva dirección de correo electrónico del usuario
 
-        public string role { get; set; }
+        public string Role { get; set; } 
     }
 
+    // DTO para iniciar sesion
     public class LoginDto
     {
-        public string email { get; set; }
-        public string password { get; set; }
+        [Required] 
+        [EmailAddress] 
+        public string email { get; set; } 
+        [Required]
+        public string password { get; set; } // Contraseña del usuario
     }
 
 

@@ -2,24 +2,37 @@ using FleetManagementAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.Threading.Tasks;
 
 namespace FleetManagementAPI.Controllers
 {
     [Route("api/auth")]
+    [Description("Auth operations")]
     [ApiController]
     public class AuthController : ControllerBase
     {
         private readonly IDbContext _context;
         private readonly IHashPassword _hashPassword;
+        private readonly IConfiguration _configuration; // Inject IConfiguration
+        private IDbContext object1;
+        private IHashPassword object2;
 
-        public AuthController(IDbContext context, IHashPassword hashPassword)
+        public AuthController(IDbContext object1, IHashPassword object2)
+        {
+            this.object1 = object1;
+            this.object2 = object2;
+        }
+
+        public AuthController(IDbContext context, IHashPassword hashPassword, IConfiguration configuration)
         {
             _context = context;
             _hashPassword = hashPassword;
+            _configuration = configuration; // Assign IConfiguration
         }
 
         [HttpPost("login")]
+        [Description("Create authentication token")]
         public async Task<ActionResult<dynamic>> Login([FromBody] LoginDto loginDto)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDto.email);
@@ -29,7 +42,7 @@ namespace FleetManagementAPI.Controllers
                 return BadRequest("Invalid email or password");
             }
 
-            var token = _hashPassword.GenerateJwtToken(user);
+            var token = _hashPassword.GenerateJwtToken(user, _configuration); // Pass IConfiguration to GenerateJwtToken
 
             return new
             {
@@ -40,10 +53,10 @@ namespace FleetManagementAPI.Controllers
         }
     }
 
-public interface IHashPassword
+    public interface IHashPassword
     {
         string EncryptPassword(string password);
-        string GenerateJwtToken(User user);
+        string GenerateJwtToken(User user, IConfiguration configuration);
         bool VerifyPasswordHash(string password, string hashedPassword);
     }
 }

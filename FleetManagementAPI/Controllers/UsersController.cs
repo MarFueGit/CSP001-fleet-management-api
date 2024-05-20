@@ -1,47 +1,34 @@
-//Importacion de espacio de nombres
-
 using FleetManagementAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace FleetManagementAPI.Controllers
 {
-    [Route("api/users")] // Establece la ruta base para todas acciones en este controlador.
-    [ApiController] // Indica que este controlador responde a las solicitudes web API.
+    [Route("api/users")] // Define la ruta base para las acciones del controlador
+    [ApiController] // Indica que esta clase es un controlador de API
     public class UsersController : ControllerBase
     {
         private readonly IDbContext _context;
-        private readonly HashPassword _hashPassword;
+        private readonly IHashPassword _hashPassword;
 
-        public UsersController(IDbContext context, IConfiguration configuration)
+        public UsersController(IDbContext context, IHashPassword hashPassword)
         {
             _context = context;
-            _hashPassword = new HashPassword(configuration);
+            _hashPassword = hashPassword;
         }
 
-        public UsersController(IDbContext @object)
-        {
-        }
-
-        /// <summary>
-        /// Retrieves a paginated list of users.
-        /// </summary>
-        /// <param name="page">The page number.</param>
-        /// <param name="pageSize">The size of each page.</param>
-        /// <returns>A paginated list of users.</returns>
         [HttpGet(Name = "users")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [Produces("application/json")] // Add this line to specify that the endpoint produces JSON
+        [Produces("application/json")]
         [Description("Return list of users")]
-        public async Task<ActionResult<object>> Get([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        public async Task<ActionResult<object>> GetUsers([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             try
             {
@@ -69,100 +56,68 @@ namespace FleetManagementAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return HandleError(ex);
             }
         }
 
-        /// <summary>
-        /// Creates a new user.
-        /// </summary>
-        /// <param name="createUserDto">The data to create the user.</param>
-        /// <returns>The newly created user.</returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
         [Description("Create a new user")]
-        public async Task<ActionResult<User>> PostUsuario([FromBody] CreateUserDto createUserDto)
+        public async Task<ActionResult<User>> CreateUser([FromBody] CreateUserDto createUserDto)
         {
             try
             {
-                // Lógica para crear un nuevo usuario
-
-                // Comprobamos si ya existe un usuario con el mismo correo electrónico
                 var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == createUserDto.Email);
                 if (existingUser != null)
                 {
                     return BadRequest("User with this email already exists.");
                 }
 
-                // Hash the password
                 string hashedPassword = _hashPassword.EncryptPassword(createUserDto.Password);
 
-                // Creamos un nuevo objeto User
                 var newUser = new User
                 {
                     Name = createUserDto.Name,
                     Email = createUserDto.Email,
                     Role = createUserDto.Role,
-                    Password = hashedPassword // Guardamos la contraseña cifrada
+                    Password = hashedPassword
                 };
 
-                // Añadimos el nuevo usuario a la base de datos
                 _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
 
-                // Devolvemos un CreatedAtActionResult con el nuevo usuario creado
-                return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
+                return CreatedAtAction(nameof(GetUsers), new { id = newUser.Id }, newUser);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return HandleError(ex);
             }
         }
 
-        /// <summary>
-        /// Updates an existing user.
-        /// </summary>
-        /// <param name="id">The ID of the user to update.</param>
-        /// <param name="updateUserDto">The data to update the user.</param>
-        /// <returns>The updated user.</returns>
         [HttpPatch("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [Produces("application/json")] // Add this line to specify that the endpoint produces JSON
+        [Produces("application/json")]
         [Description("Update the user by id")]
         public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] UpdateUserDto updateUserDto)
         {
             try
             {
-                // Find the user by ID
                 var user = await _context.Users.FindAsync(id);
                 if (user == null)
                 {
                     return NotFound($"User with ID {id} not found.");
                 }
 
-                // Update user properties if provided
-                if (!string.IsNullOrEmpty(updateUserDto.name))
-                {
-                    user.Name = updateUserDto.name;
-                }
+                user.Name = updateUserDto.Name ?? user.Name;
+                user.Email = updateUserDto.Email ?? user.Email;
+                user.Role = updateUserDto.Role ?? user.Role;
 
-                if (!string.IsNullOrEmpty(updateUserDto.email))
-                {
-                    user.Email = updateUserDto.email;
-                }
-
-                if (!string.IsNullOrEmpty(updateUserDto.role))
-                {
-                    user.Role = updateUserDto.role;
-                }
-
-                // Apply changes to the entity
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
 
@@ -170,33 +125,26 @@ namespace FleetManagementAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return HandleError(ex);
             }
         }
 
-        /// <summary>
-        /// Deletes an existing user.
-        /// </summary>
-        /// <param name="id">The ID of the user to delete.</param>
-        /// <returns>No content.</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Produces("application/json")] // Add this line to specify that the endpoint produces JSON
+        [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Description("Delete a user by id")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             try
             {
-                // Find the user by ID
                 var user = await _context.Users.FindAsync(id);
                 if (user == null)
                 {
                     return NotFound($"User with ID {id} not found.");
                 }
 
-                // Remove the user from the database
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
 
@@ -204,8 +152,13 @@ namespace FleetManagementAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return HandleError(ex);
             }
+        }
+
+        private ActionResult HandleError(Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
     }
 }

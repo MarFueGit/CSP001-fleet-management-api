@@ -1,4 +1,5 @@
 using FleetManagementAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace FleetManagementAPI.Controllers
 {
+    //[Authorize]
     [Route("api/taxis")]
     [ApiController]
     public class TaxisController : ControllerBase
@@ -20,7 +22,7 @@ namespace FleetManagementAPI.Controllers
             _context = context;
         }
 
-        [HttpGet(Name = "taxis")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PaginationMetadata))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Description("Get the list of taxis")]
@@ -55,6 +57,5 @@ namespace FleetManagementAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-
     }
 }
